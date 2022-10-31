@@ -147,11 +147,11 @@ img {
   fill: var(--main-color);
 }
 
-.contact-mail-icon:hover,
+/* .contact-mail-icon:hover,
 .contact-phone-icon:hover {
   cursor: pointer;
   fill: var(--accent-color);
-}
+} */
 
 .contact-link {
   color: inherit;
@@ -249,6 +249,8 @@ img {
 
 .advantages-icon-wrap {
   background-color: var(--bg-color-advantages-icon);
+  /* display: flex;
+  justify-content: center; можно использовать флексы*/
   padding: 25px 100px;
   margin-bottom: 30px;
   border-radius: 4px;
@@ -257,10 +259,6 @@ img {
 .advantages-icon {
   width: 70px;
   height: 70px;
-}
-
-.advantages-icon-wrap:hover .advantages-icon {
-  fill: var(--accent-color);
 }
 
 .title {
@@ -318,6 +316,9 @@ img {
 .team-item {
   flex-basis: calc((100% - 90px) / 4);
   background-color: var(--main-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-name {
@@ -358,6 +359,7 @@ img {
   justify-content: center;
   width: 44px;
   height: 44px;
+  border-radius: 50%;
 }
 
 .team-icon {
@@ -367,7 +369,6 @@ img {
 }
 .team-icon-link:hover {
   background-color: var(--accent-color);
-  border-radius: 50%;
 }
 
 .team-icon-link:hover .team-icon {
@@ -379,27 +380,24 @@ img {
 .regular-list {
   display: flex;
 }
-.regular-item {
-  flex-basis: calc(100% - (5 * 30px) / 6);
-}
 
-.regular-link {
-  display: block;
-  padding: 16px 32px;
-  border: 1px solid #afb1b8;
+.regular-item {
+  padding: 13px 30px;
+  flex-basis: calc(100% - (5 * 30px) / 6);
+  border: 1px solid var(--bg-color-social-icon);
   border-radius: 4px;
 }
 
 .regular-icon {
   width: 106px;
   height: 60px;
-  fill: #afb1b8;
+  fill: var(--bg-color-social-icon);
 }
 
-.regular-link:hover .regular-icon {
+.regular-item:hover .regular-icon {
   fill: var(--accent-color);
 }
-.regular-link:hover {
+.regular-item:hover {
   border-color: var(--accent-color);
 }
 
@@ -519,6 +517,8 @@ img {
 .portfolio-btn:focus {
   background-color: var(--accent-color);
   color: var(--white-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-image-description {
@@ -556,6 +556,11 @@ img {
   margin-bottom: 30px;
 }
 
+.portfolio-images-list-item:hover {
+  cursor: pointer;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .portfolio-images-list-item:nth-child(3n + 2) {
   margin-right: 30px;
   margin-left: 30px;
