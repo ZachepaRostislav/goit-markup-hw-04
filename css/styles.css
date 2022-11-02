@@ -108,13 +108,11 @@ img {
 
 .contact-list {
   display: flex;
-  align-items: center;
   margin-left: auto;
 }
 
 .contact-item {
   display: flex;
-  align-items: center;
 }
 
 .item:not(:first-child) {
@@ -125,6 +123,8 @@ img {
 }
 .nav-link,
 .contact-link {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -136,20 +136,22 @@ img {
   margin-right: 10px;
   width: 16px;
   height: 12px;
-  fill: var(--main-color);
+  fill: currentColor;
 }
 
 .contact-phone-icon {
   margin-right: 10px;
   width: 10px;
   height: 16px;
-  fill: var(--main-color);
+  fill: currentColor;
 }
 
-.contact-item:hover .contact-mail-icon {
+.contact-link:hover,
+.contact-link:focus .contact-mail-icon {
   fill: var(--accent-color);
 }
-.contact-item:hover .contact-phone-icon {
+.contact-item:hover,
+.contact-link:focus .contact-phone-icon {
   fill: var(--accent-color);
 }
 
@@ -392,7 +394,8 @@ img {
 }
 
 .regular-link {
-  padding: 13px 30px;
+  display: flex;
+  padding: 14px 31px;
   border: 1px solid var(--bg-color-social-icon);
   border-radius: 4px;
 }
